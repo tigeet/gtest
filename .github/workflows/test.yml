@@ -1,0 +1,12 @@
+name: gtest + actions
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd ${{ github.workspace }}
+      - run: mkdir build && cd build
+      - run: cmake -G "Ninja" -D CMAKE_C_COMPILER=clang CMAKE_CXX_COMPILER=clang++ ../project
+      - run: cmake --build .
+      - run: ./mtest.exe
