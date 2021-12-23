@@ -12,4 +12,4 @@ jobs:
       - run: cd build
       - run: cmake ${{ github.workspace }}/project
       - run: cmake --build .
-      - run: ./mtest.exe
+      - run: ./Debug/mtest.exe
