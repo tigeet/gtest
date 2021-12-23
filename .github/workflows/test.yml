@@ -10,6 +10,6 @@ jobs:
       - run: mkdir build 
       - run: tree
       - run: cd build
-      - run: cmake -G "Ninja" -D CMAKE_C_COMPILER=clang CMAKE_CXX_COMPILER=clang++ ${{ github.workspace }}/project
+      - run: cmake ${{ github.workspace }}/project
       - run: cmake --build .
       - run: ./mtest.exe
