@@ -6,9 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: cd ${{ github.workspace }}
-      - run: tree
       - run: mkdir build 
-      - run: tree
       - run: cd build
       - run: cmake ${{ github.workspace }}/project
       - run: cmake --build .
